@@ -1,30 +1,51 @@
 var produtos = [];
 var carrinho = [];
 
-
 var salvo = localStorage.getItem("carrinho");
 if (salvo) {
   carrinho = JSON.parse(salvo);
 }
 
-
 function salvarCarrinho() {
   localStorage.setItem("carrinho", JSON.stringify(carrinho));
 }
-
 
 function mostrarProdutos() {
   var container = document.getElementById("listaProdutos");
   container.innerHTML = "";
 
+  var categoria = document.getElementById("filtroCategoria").value;
+  var preco = document.getElementById("filtroPreco").value;
+
+  var lista = [];
+
   for (var i = 0; i < produtos.length; i++) {
-    var p = produtos[i];
+    if (categoria === "todos" || produtos[i].categoria === categoria) {
+      lista.push(produtos[i]);
+    }
+  }
+
+  if (preco === "menor") {
+    lista.sort(function (a, b) {
+      return a.preco - b.preco;
+    });
+  }
+
+  if (preco === "maior") {
+    lista.sort(function (a, b) {
+      return b.preco - a.preco;
+    });
+  }
+
+  for (var j = 0; j < lista.length; j++) {
+    var p = lista[j];
 
     var card = document.createElement("div");
     card.className = "card-produto";
 
     card.innerHTML =
       "<img src='" + p.imagem + "' alt='" + p.nome + "' onerror=\"this.src='https://via.placeholder.com/300x200?text=Imagem'\">" +
+      "<p><strong>" + p.categoria + "</strong></p>" +
       "<h3>" + p.nome + "</h3>" +
       "<p>" + p.descricao + "</p>" +
       "<p>R$ " + p.preco.toFixed(2).replace(".", ",") + "</p>" +
@@ -32,8 +53,10 @@ function mostrarProdutos() {
 
     container.appendChild(card);
   }
-}
 
+  document.getElementById("totalProdutos").textContent =
+    lista.length + " produto(s)";
+}
 
 function add(id) {
   var produto = null;
@@ -44,7 +67,10 @@ function add(id) {
     }
   }
 
-  if (!produto) return;
+  if (!produto) {
+    alert("Produto não encontrado!");
+    return;
+  }
 
   carrinho.push(produto);
 
@@ -52,12 +78,9 @@ function add(id) {
   atualizarCarrinho();
 }
 
-
-
 function atualizarCarrinho() {
   document.getElementById("contadorCarrinho").textContent = carrinho.length;
 }
-
 
 function mostrarCarrinho() {
   var div = document.getElementById("itensCarrinho");
@@ -76,7 +99,7 @@ function mostrarCarrinho() {
   for (var i = 0; i < carrinho.length; i++) {
     var item = carrinho[i];
 
-    total = total + item.preco;
+    total += item.preco;
 
     var linha = document.createElement("div");
 
@@ -92,14 +115,12 @@ function mostrarCarrinho() {
     total.toFixed(2).replace(".", ",");
 }
 
-
 function remover(index) {
   carrinho.splice(index, 1);
   salvarCarrinho();
   atualizarCarrinho();
   mostrarCarrinho();
 }
-
 
 document.getElementById("btnAbrirCarrinho").onclick = function () {
   document.getElementById("carrinho").style.display = "block";
@@ -117,18 +138,17 @@ document.getElementById("btnLimparCarrinho").onclick = function () {
   mostrarCarrinho();
 };
 
+document.getElementById("filtroCategoria").onchange = mostrarProdutos;
+document.getElementById("filtroPreco").onchange = mostrarProdutos;
 
 fetch("./produtos.json")
   .then(function (res) {
-    if (!res.ok) {
-      throw new Error("Erro ao carregar JSON");
-    }
+    if (!res.ok) throw new Error("Erro ao carregar JSON");
     return res.json();
   })
   .then(function (dados) {
     produtos = dados;
     mostrarProdutos();
   });
-
 
 atualizarCarrinho();
