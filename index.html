@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoTrend</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <h1>♻️EcoTrend</h1>
+
+    <button id="btnAbrirCarrinho">
+      🛒 Ver Carrinho (<span id="contadorCarrinho">0</span>)
+    </button>
+  </header>
+
+  <!-- FILTROS -->
+  <section id="filtros">
+    <h2>Filtrar produtos</h2>
+
+    <label for="filtroCategoria">Categoria:</label>
+    <select id="filtroCategoria">
+      <option value="todos">Todos</option>
+      <option value="roupas">Roupas</option>
+      <option value="beleza">Beleza</option>
+      <option value="casa">Casa</option>
+      <option value="tecnologia">Tecnologia</option>
+    </select>
+
+    <label for="filtroPreco">Ordenar por preço:</label>
+    <select id="filtroPreco">
+      <option value="padrao">Padrão</option>
+      <option value="menor">Menor preço</option>
+      <option value="maior">Maior preço</option>
+    </select>
+  </section>
+
+  <!-- LISTA DE PRODUTOS -->
+  <section id="produtos">
+    <h2>Nossos Produtos</h2>
+
+    <p id="totalProdutos"></p>
+
+    <div id="listaProdutos">
+      <!-- Cards criados via JavaScript -->
+    </div>
+  </section>
+
+  <!-- CARRINHO -->
+  <section id="carrinho">
+    <h2>🛒 Carrinho de Compras</h2>
+
+    <div id="itensCarrinho">
+      <!-- Itens criados via JavaScript -->
+    </div>
+
+    <p id="mensagemVazio">Seu carrinho está vazio.</p>
+
+    <p>
+      <strong>Total: R$ <span id="totalCarrinho">0,00</span></strong>
+    </p>
+
+    <button id="btnFecharCarrinho">Fechar carrinho</button>
+    <button id="btnLimparCarrinho">Esvaziar carrinho</button>
+  </section>
+
+  <footer>
+    <p>EcoTrend &copy; 2025</p>
+  </footer>
+
+  <script src="javascript.js"></script>
+
+</body>
+</html>

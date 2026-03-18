@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "nome": "Camiseta Orgânica",
+    "categoria": "roupas",
+    "preco": 89.90,
+    "descricao": "100% algodão orgânico",
+    "imagem": "https://oriba.fbitsstatic.net/img/p/camiseta-algodao-organico-gola-v-150366/337281-16.jpg?w=600"
+  },
+  {
+    "id": 2,
+    "nome": "Calça de Linho",
+    "categoria": "roupas",
+    "preco": 179.00,
+    "descricao": "Linho sustentável",
+    "imagem": "https://40791.cdn.simplo7.net/static/40791/sku/calcas-calca-alfaiataria-em-linho-p-1716929578744.jpg"
+  },
+  {
+    "id": 3,
+    "nome": "Bolsa de Algodão",
+    "categoria": "roupas",
+    "preco": 45.00,
+    "descricao": "Ecobag reutilizável",
+    "imagem": "https://adesimais.com.br/21591-thickbox_default/bolsa-algodao-cru-personalizada.jpg"
+  },
+  {
+    "id": 4,
+    "nome": "Sérum Vitamina C",
+    "categoria": "beleza",
+    "preco": 64.90,
+    "descricao": "Produto vegano",
+    "imagem": "https://m.media-amazon.com/images/I/4101z+5wO8L._AC_SX342_SY445_QL70_ML2_.jpg"
+  },
+  {
+    "id": 5,
+    "nome": "Kit Bambu Banheiro",
+    "categoria": "beleza",
+    "preco": 49.90,
+    "descricao": "Kit sustentável",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_745657-MLA99508165138_112025-F.webp"
+  },
+  {
+    "id": 6,
+    "nome": "Protetor Solar Mineral",
+    "categoria": "beleza",
+    "preco": 55.90,
+    "descricao": "FPS 50",
+    "imagem": "https://images.tcdn.com.br/img/img_prod/891385/protetor_solar_fisico_pele_mista_seca_fps_30_83_1_04fc88acb00e92a4a2c0d93c647b0dd7.png"
+  },
+  {
+    "id": 7,
+    "nome": "Vela de Cera de Abelha",
+    "categoria": "casa",
+    "preco": 38.00,
+    "descricao": "Aromática",
+    "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0o0uNgr56tyuJpAKvJnVTvUsNOcFULDtFiQ&s"
+  },
+  {
+    "id": 8,
+    "nome": "Colcha Reciclada",
+    "categoria": "casa",
+    "preco": 249.00,
+    "descricao": "Material reciclado",
+    "imagem": "https://media.adeo.com/marketplace/MKP/90800271/2483d3a0366f0b24d8eeee8f12b5baff.jpeg"
+  },
+  {
+    "id": 9,
+    "nome": "Difusor de Aroma Bambu",
+    "categoria": "casa",
+    "preco": 129.00,
+    "descricao": "Relaxante",
+    "imagem": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTjxHJB7aoL7zuv3vZiDlTEeVZXc-bxhj-eH7kb8Yuu5gzW1BNvQThuthlIuDmpQ7OXnwCh-aca9u60qFzOtZNGfn_j-ncKIAzFZ6kHRt7vnofUtNP-DSsrpnIwb8RUlLJbLN-rzwCM3Q&usqp=CAc"
+  },
+  {
+    "id": 10,
+    "nome": "Carregador Solar",
+    "categoria": "tecnologia",
+    "preco": 219.90,
+    "descricao": "Energia solar",
+    "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0815GIxQnpXHyIpxzbAAHHZ8pjeno7OsBqg&s"
+  },
+  {
+    "id": 11,
+    "nome": "Lâmpada LED Solar",
+    "categoria": "tecnologia",
+    "preco": 74.90,
+    "descricao": "Iluminação eficiente",
+    "imagem": "data:image/jpeg;base64,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"
+  },
+  {
+    "id": 12,
+    "nome": "Smartwatch Eco",
+    "categoria": "tecnologia",
+    "preco": 499.00,
+    "descricao": "Tecnologia sustentável",
+    "imagem": "https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg"
+  }
+]

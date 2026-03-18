@@ -1,0 +1,235 @@
+/* ================================
+   ECOTREND - Estilos básicos
+   ================================ */
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+
+header {
+  background: green;
+  color: white;
+  padding: 15px;
+
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+header h1 {
+  margin: 0 0 5px 0;
+}
+
+header p {
+  margin: 0 0 15px 0;
+}
+
+header button {
+  background-color: white;
+  color: #2e7d32;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+header button:hover {
+  background-color: #c8e6c9;
+}
+
+/* filtros */
+#filtros {
+  background-color: white;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+#filtros h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+#filtros label {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+#filtros select {
+  padding: 6px;
+  margin-right: 20px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+/* produtos */
+#produtos {
+  padding: 20px;
+}
+
+#totalProdutos {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* grid */
+#listaProdutos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* centraliza os cards */
+}
+
+/* card */
+.card-produto {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 220px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.2s;
+}
+
+.card-produto:hover {
+  transform: scale(1.02);
+}
+
+/* IMAGEM DO PRODUTO */
+.card-produto img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover; /* deixa imagem perfeita */
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* título */
+.card-produto h3 {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* categoria */
+.card-produto .categoria {
+  font-size: 12px;
+  color: #888;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+/* descrição */
+.card-produto .descricao {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* preço */
+.card-produto .preco {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+/* botão */
+.card-produto button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.card-produto button:hover {
+  background-color: #1b5e20;
+}
+
+/* carrinho */
+#carrinho {
+  display: none;
+  background-color: white;
+  border: 2px solid #2e7d32;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* item carrinho */
+.item-carrinho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+/* nome + preço */
+.item-carrinho span {
+  font-size: 14px;
+}
+
+/* botão remover */
+.item-carrinho button {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.item-carrinho button:hover {
+  background-color: #b71c1c;
+}
+
+/* botões carrinho */
+#btnFecharCarrinho,
+#btnLimparCarrinho {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  border: none;
+}
+
+#btnFecharCarrinho {
+  background-color: #2e7d32;
+  color: white;
+}
+
+#btnFecharCarrinho:hover {
+  background-color: #1b5e20;
+}
+
+#btnLimparCarrinho {
+  background-color: #e53935;
+  color: white;
+}
+
+#btnLimparCarrinho:hover {
+  background-color: #b71c1c;
+}
+
+/* rodapé */
+footer {
+  background-color: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
